@@ -1,4 +1,4 @@
-for file in data*.txt
+for file in output*.txt
 do
-	mv $file $(echo $(basename $file .txt) | sed s/data/input/).txt
+	cp $file $(echo $(basename $file .txt)).bak
 done
